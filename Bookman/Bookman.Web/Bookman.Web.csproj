@@ -195,7 +195,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -275,6 +274,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bookman.Data\Bookman.Data.csproj">
+      <Project>{46D2E702-A3E0-4CB9-95A1-E2FFAC0CC195}</Project>
+      <Name>Bookman.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bookman.Models\Bookman.Models.csproj">
+      <Project>{835828E0-1A88-43AA-8347-925A7DECC423}</Project>
+      <Name>Bookman.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
