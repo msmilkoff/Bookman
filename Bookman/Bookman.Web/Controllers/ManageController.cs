@@ -1,15 +1,15 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.Mvc;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin.Security;
-using Bookman.Web.Models;
-
-namespace Bookman.Web.Controllers
+﻿namespace Bookman.Web.Controllers
 {
+    using System;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using System.Web;
+    using System.Web.Mvc;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.Owin;
+    using Microsoft.Owin.Security;
+    using Bookman.Web.Models;
+
     [Authorize]
     public class ManageController : Controller
     {
