@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{8B2AE985-4DFA-443C-999D-6B6950E88289}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{FAE25073-1C62-4830-9FA1-B1EAD1D45638}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{FCC24218-DB6B-49F4-BAFB-61CFF245B341}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookman.Web", "Bookman.Web\Bookman.Web.csproj", "{A7FAFD9D-D711-4C05-8369-C2897B266B2A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7FAFD9D-D711-4C05-8369-C2897B266B2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7FAFD9D-D711-4C05-8369-C2897B266B2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7FAFD9D-D711-4C05-8369-C2897B266B2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7FAFD9D-D711-4C05-8369-C2897B266B2A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A7FAFD9D-D711-4C05-8369-C2897B266B2A} = {FAE25073-1C62-4830-9FA1-B1EAD1D45638}
+	EndGlobalSection
+EndGlobal
