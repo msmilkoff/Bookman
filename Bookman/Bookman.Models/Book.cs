@@ -19,7 +19,12 @@
         [StringLength(150)]
         public string Title { get; set; }
 
+        [StringLength(200)]
+        public string Description { get; set; }
+
         public BookRating Rating { get; set; }
+
+        public byte[] CoverImage { get; set; }
 
         public int CategoryId { get; set; }
 
