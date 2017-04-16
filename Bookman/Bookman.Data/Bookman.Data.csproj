@@ -56,6 +56,7 @@
     <Compile Include="BookmanData.cs" />
     <Compile Include="BookmanDbContext.cs" />
     <Compile Include="GenericRepository.cs" />
+    <Compile Include="IBookmanData.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
