@@ -291,6 +291,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Bookman.Common\Bookman.Common.csproj">
+      <Project>{1d2545f7-4a28-41cd-8f6a-dd9147c1d4ca}</Project>
+      <Name>Bookman.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Bookman.Data\Bookman.Data.csproj">
       <Project>{46D2E702-A3E0-4CB9-95A1-E2FFAC0CC195}</Project>
       <Name>Bookman.Data</Name>
