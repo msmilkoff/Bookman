@@ -24,7 +24,7 @@
 
         public BookRating Rating { get; set; }
 
-        public byte[] CoverImage { get; set; }
+        public string CoverImageUrl { get; set; }
 
         public int CategoryId { get; set; }
 

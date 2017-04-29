@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace Bookman.Web
 {
@@ -22,6 +21,9 @@ namespace Bookman.Web
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/navshrink").Include(
+                     "~/Scripts/navbar-shrink.js"));
 
             // Paper theme for bootstrap - https://bootswatch.com/paper
             bundles.Add(new StyleBundle("~/Content/css").Include(
