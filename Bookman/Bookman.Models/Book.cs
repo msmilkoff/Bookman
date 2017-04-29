@@ -22,7 +22,7 @@
         [StringLength(200)]
         public string Description { get; set; }
 
-        public BookRating Rating { get; set; }
+        public decimal Price { get; set; }
 
         public string CoverImageUrl { get; set; }
 

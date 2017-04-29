@@ -12,8 +12,6 @@
         [StringLength(1000, MinimumLength = 20)]
         public string Content { get; set; }
 
-        public BookRating Rating { get; set; }
-
         public virtual User User { get; set; }
 
         public int BookId { get; set; }
