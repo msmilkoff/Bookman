@@ -23,8 +23,9 @@ namespace Bookman.Web
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            // Paper theme for bootstrap - https://bootswatch.com/paper
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap-paper.css",
                       "~/Content/site.css"));
         }
     }
