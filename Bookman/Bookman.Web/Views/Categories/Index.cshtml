@@ -1,0 +1,16 @@
+﻿@model Bookman.Web.Models.AllCategoriesViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Genres</h2>
+
+@foreach (var category in Model.Categories)
+{
+    <h4>@category</h4>
+    @*Insert books here*@
+    <hr />
+}
+
+

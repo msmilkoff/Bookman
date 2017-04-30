@@ -22,8 +22,10 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+                    @*
+                        Add links here
+                    *@
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -31,15 +33,47 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Bookman</p>
+
+    </div>
+
+    <div class="panel panel-footer">
+        <footer class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-1">
+                    <h3>About Bookman</h3>
+                    <p>
+                        A web application for reviewing, browsing and buying and learning news about books.
+                        We offer good prices and great insights.
+                    </p>
+                    <p> Dive with us into the endless ocean of knowledge!</p>
+                </div>
+
+                <div class="col-sm-3 col-sm-offset-1">
+                    <h3>Contact us</h3>
+                    <span class="glyphicons glyphicons-map-marker"></span>
+                    <address>
+                        <span class="glyphicons glyphicons-earphone"></span>
+                        <strong>Bookman, Inc.</strong><br>
+                        Vitosha blvd.<br>
+                        Sofia, Bulgaria<br>
+                        <abbr title="Phone">P:</abbr> (123) 456-7890
+                    </address>
+                </div>
+
+                <div class="col-sm-4">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.893530980406!2d23.314053415036707!3d42.68479757916644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa851045e62c3f%3A0x75c66d6bd9bbbc0b!2z0LHRg9C7LiDigJ7QktC40YLQvtGI0LDigJwsINCh0L7RhNC40Y8!5e0!3m2!1sbg!2sbg!4v1493562789683" width="350" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <br />
+            <p class="text-left">&copy; @DateTime.Now.Year - Bookman&trade;, Inc.</p>
+            <small class="author">Mario Smilkov</small>
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    
+
     @Scripts.Render("~/bundles/navshrink")
 
     @RenderSection("scripts", required: false)
