@@ -1,14 +1,24 @@
 ﻿namespace Bookman.Web.Controllers
 {
+    using System.Linq;
     using System.Web.Mvc;
+    using Bookman.Services.Abstractions;
 
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        private IHomeService homeService;
+
+        public HomeController(IHomeService homeService)
         {
-            return View();
+            this.homeService = homeService;
         }
 
+        [HttpGet]
+        public ActionResult Index()
+        {
+            var latestBooks = this.homeService.GetLatestBooks().ToList();
 
+            return View(latestBooks);
+        }
     }
 }

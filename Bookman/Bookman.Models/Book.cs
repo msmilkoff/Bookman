@@ -1,5 +1,6 @@
 ﻿namespace Bookman.Models
 {
+    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
@@ -10,6 +11,7 @@
         public Book()
         {
             this.reviews = new HashSet<Review>();
+            this.DateAdded = DateTime.Now;
         }
 
         [Key]
@@ -23,6 +25,8 @@
         public string Description { get; set; }
 
         public decimal Price { get; set; }
+
+        public DateTime? DateAdded { get; set; }
 
         public string CoverImageUrl { get; set; }
 

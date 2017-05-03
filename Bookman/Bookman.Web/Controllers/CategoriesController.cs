@@ -1,25 +1,33 @@
 ﻿namespace Bookman.Web.Controllers
 {
-    using System.Collections.Generic;
-    using System.Linq;
     using System.Web.Mvc;
-    using Bookman.Data;
-    using Bookman.Web.Models;
+    using Bookman.Services.Abstractions;
 
     public class CategoriesController : Controller
     {
-        [HttpGet]
-        public ActionResult Index()
+        private ICategoryService categoryService;
+
+        public CategoriesController(ICategoryService categoryService)
         {
-            var db = new BookmanDbContext();
-            var categoryNames = db.Categories.Select(c => c.Name).ToList();
+            this.categoryService = categoryService;
+        }
 
-            var model = new AllCategoriesViewModel()
-            {
-                Categories = new List<string>(categoryNames)
-            };
+        [HttpGet]
+        public ActionResult All()
+        {
+            var categoriesViewModel = this.categoryService.GetAllCategories();
 
-            return View(model);
+            return View(categoriesViewModel);
+        }
+
+        [HttpGet]
+        [Route("Categories/Show/{categoryName}")]
+        public ActionResult Show(string categoryName)
+        {
+            ViewBag.CategoryName = categoryName;
+            var categoryViewModel = this.categoryService.GetCategoryByName(categoryName);
+
+            return View(categoryViewModel);
         }
     }
 }

@@ -18,6 +18,7 @@ namespace Bookman.Data.Migrations
         {
             this.SeedRole(GlobalConstants.AdminRole, context);
             this.SeedRole(GlobalConstants.AuthorRole, context);
+            this.SeedRole(GlobalConstants.UserRole, context);
         }
 
         private void SeedRole(string identityRole, BookmanDbContext context)

@@ -6,11 +6,15 @@ namespace Bookman.Web.App_Start
     using System;
     using System.Data.Entity;
     using System.Web;
-    using Bookman.Data;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+    
+    using Bookman.Data;
+    using Bookman.Services.Abstractions;
+    using Bookman.Services.HomeServices;
 
     using Ninject;
     using Ninject.Web.Common;
+    using Bookman.Services.CategoryServices;
 
     public static class NinjectWebCommon 
     {
@@ -64,6 +68,9 @@ namespace Bookman.Web.App_Start
         {
             kernel.Bind<DbContext>().To<BookmanDbContext>();
             kernel.Bind<IBookmanData>().To<BookmanData>();
+
+            kernel.Bind<IHomeService>().To<HomeService>();
+            kernel.Bind<ICategoryService>().To<CategoryService>();
         }        
     }
 }

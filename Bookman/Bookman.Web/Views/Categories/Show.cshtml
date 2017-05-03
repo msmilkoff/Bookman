@@ -1,0 +1,22 @@
+﻿@model Bookman.ViewModels.Categories.CategoryViewModel
+
+@{
+    ViewBag.Title = ViewBag.CategoryName;
+}
+
+<h2>All @ViewBag.CategoryName books</h2>
+
+<div class="row">
+
+    @foreach (var cover in Model.BookCovers)
+    {
+        <div class="col-sm-3">
+            @*make these links later*@
+            <img src="@Url.Content(cover)" alt="Book Cover" style="width:200px; height:300px" />
+        </div>
+    }
+
+</div>
+<br />
+
+
