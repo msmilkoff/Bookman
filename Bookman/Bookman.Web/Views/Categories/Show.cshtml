@@ -8,11 +8,12 @@
 
 <div class="row">
 
-    @foreach (var cover in Model.BookCovers)
+    @foreach (var ct in Model.BookCovers.Zip(Model.BookTitles, (c, t) => new { Cover = c, Title = t }))
     {
         <div class="col-sm-3">
-            @*make these links later*@
-            <img src="@Url.Content(cover)" alt="Book Cover" style="width:200px; height:300px" />
+            <a href="@Url.Action("Details", "Books", new { title =  ct.Title})">
+                <img src="@Url.Content(ct.Cover)" alt="Book Cover" style="width:200px; height:300px" />
+            </a>
         </div>
     }
 

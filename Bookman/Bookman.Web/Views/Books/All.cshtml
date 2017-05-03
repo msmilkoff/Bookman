@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Bookman.ViewModels.Books.AllBooksViewModel>
+
+@{
+    ViewBag.Title = "All Books";
+}
+
+<br />
+<br />
+
+@foreach (var book in Model)
+{
+    <div class="row">
+
+        <div class="col-sm-3">
+            <img src="@Url.Content(book.CoverImageUrl)" alt="Cover Image" style="width:200px; height:300px"/>
+        </div>
+
+        <div class="col-sm-6">
+            <h4>@Html.ActionLink(book.Title, "Details", "Books", new { title = book.Title }, new { style = "color:#444444;" })</h4>
+            <div>
+                <p class="lead">@book.Description</p>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+}
+

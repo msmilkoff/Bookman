@@ -1,0 +1,41 @@
+﻿@model Bookman.ViewModels.Books.BookDetailsViewModel
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<div class="row">
+
+    <div class="col-sm-4">
+        <img src="@Url.Content(Model.CoverImageUrl)" alt="Cover Image" style="width:350px; height:450px" />
+    </div>
+
+    <div class="col-sm-6">
+        <h4>@Model.Title</h4>
+
+        <div>
+            <p class="lead">@Model.Description</p>
+            <br />
+        </div>
+
+        <div>
+            <p class="lead"><strong>Author: </strong>@Model.Author.FullName</p>
+        </div>
+
+        <div>
+            <p class="lead"><strong>Genre: </strong>@Model.Category.Name</p>
+        </div>
+
+        <div>
+            <p class="lead"><strong>Price: </strong>@Model.Price&euro;</p>
+            <br />
+        </div>
+
+        <div>
+            @Html.ActionLink("Order Now", "NewOrder", "Order", new { id = Model.Id }, new { @class = "btn btn-primary"})
+        </div>
+    </div>
+</div>
+
+<hr />
+

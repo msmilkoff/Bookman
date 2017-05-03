@@ -3,22 +3,23 @@
 @{
     ViewBag.Title = "Home Page";
 }
+
 <br />
-<br />
+
 <div class="row">
 
     <div class="col-sm-3">
         <h2>Genres</h2>
         <ul>
-            <li><a href="#"><h4>Fantasy</h4></a></li>
-            <li><a href="#"><h4>Science-Fiction</h4></a></li>
-            <li><a href="#"><h4>Horror</h4></a></li>
-            <li><a href="#"><h4>Non-Fiction</h4></a></li>
-            <li><a href="#"><h4>Comedy</h4></a></li>
-            <li><a href="#"><h4>Mystery</h4></a></li>
-            <li><a href="#"><h4>Classical</h4></a></li>
-            <li><a href="#"><h4>Poetry</h4></a></li>
-            <li><h4>@Html.ActionLink("All", "All", "Categories")  &raquo;</h4></li>
+            <li><h4>@Html.ActionLink("Fantasy", "Show", "Categories", new { categoryName = "Fantasy" }, new { style="color:#444444;" })</h4>
+            <li><h4>@Html.ActionLink("Science-Fiction", "Show", "Categories", new { categoryName = "Science-Fiction" }, new { style = "color:#444444;" })</h4>
+            <li><h4>@Html.ActionLink("Horror", "Show", "Categories", new { categoryName = "Horror" }, new { style = "color:#444444;" })</h4>
+            <li><h4>@Html.ActionLink("Non-Fiction", "Show", "Categories", new { categoryName = "Non-Fiction" }, new { style = "color:#444444;" })</h4>
+            <li><h4>@Html.ActionLink("Comedy", "Show", "Categories", new { categoryName = "Comedy" }, new { style = "color:#444444;" })</h4>
+            <li><h4>@Html.ActionLink("Mystery", "Show", "Categories", new { categoryName = "Mystery" }, new { style = "color:#444444;" })</h4>
+            <li><h4>@Html.ActionLink("Classical", "Show", "Categories", new { categoryName = "Classical" }, new { style = "color:#444444;" })</h4>
+            <li><h4>@Html.ActionLink("Poetry", "Show", "Categories", new { categoryName = "Poetry" }, new { style = "color:#444444;" })</h4>
+            <li><h4>@Html.ActionLink("All", "All", "Categories", null, new { style = "color:#444444;" })  &raquo;</h4></li>
         </ul>
     </div>
 
@@ -34,7 +35,7 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img src="@Url.Content(Model[0].CoverImageUrl)" alt="Cover Image" style="width:100%; height: 460px;">
+                        <img src="@Url.Content(Model[0].CoverImageUrl)" alt="Cover Image" style="width:100%; height: 500px;">
 
                         <div class="carousel-caption">
                             <p>@Model[0].Description<</p>
@@ -42,7 +43,7 @@
                     </div>
 
                     <div class="item">
-                        <img src="@Url.Content(Model[1].CoverImageUrl)" alt="Cover Image" style="width:100%; height: 460px;">
+                        <img src="@Url.Content(Model[1].CoverImageUrl)" alt="Cover Image" style="width:100%; height: 500px;">
 
                         <div class="container">
                             <div class="carousel-caption">
@@ -52,7 +53,7 @@
                     </div>
 
                     <div class="item">
-                        <img src="@Url.Content(Model[2].CoverImageUrl)" alt="Cover Image" style="width:100%; height: 460px;">
+                        <img src="@Url.Content(Model[2].CoverImageUrl)" alt="Cover Image" style="width:100%; height: 500px;">
 
                         <div class="carousel-caption">
                             <p>@Model[2].Description</p>
@@ -74,3 +75,4 @@
 
 
 </div>
+<br />

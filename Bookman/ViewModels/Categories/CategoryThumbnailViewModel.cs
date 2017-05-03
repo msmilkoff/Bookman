@@ -7,5 +7,7 @@
         public string Name { get; set; }
 
         public IEnumerable<string> BookCovers { get; set; }
+
+        public IEnumerable<string> BookTitles { get; set; }
     }
 }

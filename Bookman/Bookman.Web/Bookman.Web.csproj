@@ -209,6 +209,7 @@
     <Compile Include="Areas\Author\AuthorAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -281,6 +282,9 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Categories\All.cshtml" />
     <Content Include="Views\Categories\Show.cshtml" />
+    <Content Include="Views\Books\All.cshtml" />
+    <Content Include="Views\Books\DisplayTemplates\BookDetailsViewModel.cshtml" />
+    <Content Include="Views\Books\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

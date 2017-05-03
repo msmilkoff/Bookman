@@ -20,7 +20,12 @@
                 .Select(c => new
                 {
                     Name = c.Name,
-                    BookCovers = c.Books.Select(b => b.CoverImageUrl)
+                    BookCovers = c.Books
+                        .OrderBy(b => b.Title)
+                        .Select(b => b.CoverImageUrl),
+                    BookTitles = c.Books
+                        .OrderBy(b => b.Title)
+                        .Select(b => b.Title)
                 });
 
             var allCategoriesViewModel = new List<CategoryThumbnailViewModel>();
@@ -29,7 +34,8 @@
                 allCategoriesViewModel.Add(new CategoryThumbnailViewModel
                 {
                     Name = category.Name,
-                    BookCovers = category.BookCovers
+                    BookCovers = category.BookCovers,
+                    BookTitles = category.BookTitles
                 });
             }
 
@@ -43,13 +49,19 @@
                 .Where(c => c.Name == categoryName)
                 .Select(c => new
                 {
-                    BookCovers = c.Books.Select(b => b.CoverImageUrl)
+                    BookCovers = c.Books
+                        .OrderBy(b => b.Title)
+                        .Select(b => b.CoverImageUrl),
+                    BookTitles = c.Books
+                        .OrderBy(b => b.Title)
+                        .Select(b => b.Title)
                 })
                 .First();
 
             var categoryViewModel = new CategoryViewModel
             {
-                BookCovers = category.BookCovers
+                BookCovers = category.BookCovers,
+                BookTitles = category.BookTitles
             };
 
             return categoryViewModel;

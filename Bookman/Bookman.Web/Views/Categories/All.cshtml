@@ -8,13 +8,14 @@
 
 @foreach (var category in Model)
 {
-    <h4>@category.Name</h4> @*make this a link the concrete category later*@
+    <h4>@Html.ActionLink(category.Name, "Show", "Categories", new { categoryName = category.Name }, new { style="color:#444444;" })</h4>
     <div class="row">
-        @foreach (var cover in category.BookCovers)
+        @foreach (var ct in category.BookCovers.Zip(category.BookTitles, (c, t) => new { Cover = c, Title = t }))
         {
             <div class="col-sm-3">
-                @*make these links later*@
-                <img src="@Url.Content(cover)" alt="Book Cover" style="width:200px; height:300px"/>
+                <a href="@Url.Action("Details", "Books", new { title =  ct.Title})">
+                    <img src="@Url.Content(ct.Cover)" alt="Book Cover" style="width:200px; height:300px" />
+                </a>
             </div>
         }
 

@@ -22,7 +22,16 @@
                 .OrderByDescending(b => b.DateAdded)
                 .Take(3);
 
-            var latestBooksViewModel = Mapper.Map<IEnumerable<Book>, IEnumerable<LatestBookViewModel>>(latestBooks);
+            var latestBooksViewModel = new List<LatestBookViewModel>();
+            foreach (var book in latestBooks)
+            {
+                latestBooksViewModel.Add(new LatestBookViewModel
+                {
+                    Description = book.Description,
+                    CoverImageUrl = book.CoverImageUrl
+                });
+            }
+
             return latestBooksViewModel;
         }
     }

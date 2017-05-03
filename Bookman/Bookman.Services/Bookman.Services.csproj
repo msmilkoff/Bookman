@@ -44,8 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstractions\BaseService.cs" />
+    <Compile Include="Abstractions\IBookService.cs" />
     <Compile Include="Abstractions\ICategoryService.cs" />
     <Compile Include="Abstractions\IHomeService.cs" />
+    <Compile Include="BookServices\BookService.cs" />
     <Compile Include="CategoryServices\CategoryService.cs" />
     <Compile Include="HomeServices\HomeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
