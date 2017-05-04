@@ -3,14 +3,20 @@
     using AutoMapper;
     using Bookman.Models;
     using Bookman.ViewModels.Books;
-    using ViewModels.Home;
+    using Bookman.ViewModels.Orders;
 
     public class AutoMapperConfig
     {
         public static void RegisterMappings()
         {
-            Mapper.Initialize(cfg => cfg.CreateMap<Book, AllBooksViewModel>());
-            Mapper.Initialize(cfg => cfg.CreateMap<Book, BookDetailsViewModel>());
+            Mapper.Initialize(cfg =>
+            {
+                cfg.CreateMap<Book, AllBooksViewModel>();
+                cfg.CreateMap<Book, BookDetailsViewModel>();
+                cfg.CreateMap<OrderBookViewModel, Order>();
+                cfg.CreateMap<Order, OrderViewModel>();
+            });
+        
         }
     }
 }

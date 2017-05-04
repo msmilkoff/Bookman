@@ -27,6 +27,8 @@
             {
                 latestBooksViewModel.Add(new LatestBookViewModel
                 {
+                    Id = book.Id,
+                    Title = book.Title,
                     Description = book.Description,
                     CoverImageUrl = book.CoverImageUrl
                 });

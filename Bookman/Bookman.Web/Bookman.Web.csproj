@@ -70,6 +70,9 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Mvc.Expressions, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Web.Mvc.Expressions.1.0.6\lib\System.Web.Mvc.Expressions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -213,6 +216,7 @@
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -285,6 +289,9 @@
     <Content Include="Views\Books\All.cshtml" />
     <Content Include="Views\Books\DisplayTemplates\BookDetailsViewModel.cshtml" />
     <Content Include="Views\Books\Details.cshtml" />
+    <Content Include="Views\Orders\Buy.cshtml" />
+    <Content Include="Views\Orders\EditorTemplates\OrderBookViewModel.cshtml" />
+    <Content Include="Views\Orders\MyOrders.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

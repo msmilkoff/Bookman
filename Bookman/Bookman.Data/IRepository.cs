@@ -1,6 +1,5 @@
 ﻿namespace Bookman.Data
 {
-    using System.Collections.Generic;
     using System.Linq;
 
     public interface IRepository<T>
@@ -8,7 +7,7 @@
     {
         IQueryable<T> All();
 
-        T GetById(int id);
+        T GetById(string id);
 
         void Add(T entity);
 
@@ -16,7 +15,7 @@
 
         void Delete(T entity);
 
-        void Delete(int id);
+        void Delete(string id);
 
         void Detach(T entity);
     }

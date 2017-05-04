@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Bookman.ViewModels.Orders.OrderViewModel>
+
+@{
+    ViewBag.Title = "My Orders";
+}
+
+<br />
+<br />
+
+@foreach (var order in Model)
+{
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Delivery Address</th>
+                    <th>Phone number</th>
+                    <th>Email Address</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>@order.Id</td>
+                    <td><a href="/Books/Details/@order.Book.Title">@order.Book.Title</a></td>
+                    <td>@order.Book.Price</td>
+                    <td>@order.Address</td>
+                    <td>@order.PhoneNumber</td>
+                    <td>@order.Email</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <br />
+    <hr />
+}

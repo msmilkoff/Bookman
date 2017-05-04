@@ -22,9 +22,6 @@ namespace Bookman.Web
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/navshrink").Include(
-                     "~/Scripts/navbar-shrink.js"));
-
             // Paper theme for bootstrap - https://bootswatch.com/paper
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap-paper.css",

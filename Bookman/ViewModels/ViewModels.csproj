@@ -34,6 +34,7 @@
       <HintPath>..\packages\AutoMapper.6.0.2\lib\net45\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,9 +46,11 @@
   <ItemGroup>
     <Compile Include="Books\AllBooksViewModel.cs" />
     <Compile Include="Books\BookDetailsViewModel.cs" />
+    <Compile Include="Orders\OrderBookViewModel.cs" />
     <Compile Include="Categories\CategoryThumbnailViewModel.cs" />
     <Compile Include="Categories\CategoryViewModel.cs" />
     <Compile Include="Home\LatestBookViewModel.cs" />
+    <Compile Include="Orders\OrderViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,61 @@
+﻿@model  Bookman.ViewModels.Orders.OrderBookViewModel
+
+@{
+    ViewBag.Title = "OrderBookViewModel";
+}
+
+<h3>Order Book - @Model.Book.Title</h3>
+<h4>Price - @Model.Book.Price &euro;</h4>
+
+@using (Html.BeginForm("Buy", "Orders", FormMethod.Post))
+{
+    @Html.AntiForgeryToken();
+    @Html.ValidationSummary(true);
+
+    <div class="row">
+
+        <div class="col-sm-3">
+            <a href="@Url.Action("Details", "Books", new { title =  Model.Book.Title})">
+                <img src="@Url.Content(Model.Book.CoverImageUrl)" alt="Book Cover" style="width:200px; height:300px" />
+            </a>
+        </div>
+
+        <div class="col-sm-3">
+            <div>
+                <div>@Html.LabelFor(b => b.Address, new { style = "width:200px;" })</div>
+                @Html.EditorFor(b => b.Address)
+                <br />
+                @Html.ValidationMessageFor(b => b.Address, null, new { @class = "text text-danger"})
+            </div>
+            <br />
+
+            <div>
+                <div>@Html.LabelFor(b => b.PhoneNumber, "Phone Number", new { style = "width:200px;" })</div>
+                @Html.EditorFor(b => b.PhoneNumber)
+                <br />
+                @Html.ValidationMessageFor(b => b.PhoneNumber, null, new { @class = "text text-danger" })
+
+            </div>
+            <br />
+
+            <div>
+                <div>@Html.LabelFor(b => b.Email, new { style = "width:200px;" })</div>
+                @Html.EditorFor(b => b.Email)
+                <br />
+                @Html.ValidationMessageFor(b => b.Email, null, new { @class = "text text-danger" })
+
+            </div>
+
+            <br />
+
+            <input type="submit" name="buy" value="Order Now" />
+
+        </div>
+
+    </div>
+}
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}

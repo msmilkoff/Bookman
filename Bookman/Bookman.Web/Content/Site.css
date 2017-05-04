@@ -22,3 +22,73 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* Override table styles */
+table {
+    border-collapse: collapse;
+    border: 2px solid black;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: white;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Override hr style */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+/* Override ul style */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: aquamarine;
+    color: aquamarine;
+}
+
+li a:hover:not(.active) {
+    background-color: coral;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+/* Override headings */
+
+h3, h4 {
+    color: #333333;
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+h5 {
+    color: #333333;
+    font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
+}
