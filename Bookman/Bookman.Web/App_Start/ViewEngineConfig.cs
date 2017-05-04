@@ -1,4 +1,4 @@
-﻿namespace Bookman.Common
+﻿namespace Bookman.Web.App_Start
 {
     using System.Web.Mvc;
 
