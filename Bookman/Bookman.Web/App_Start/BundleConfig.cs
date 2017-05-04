@@ -22,10 +22,19 @@ namespace Bookman.Web
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundle/summernote").Include(
+               "~/Content/summernote/summernote.js"
+               ));
+
             // Paper theme for bootstrap - https://bootswatch.com/paper
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap-paper.css",
+                      "~/Content/css/font-awesome.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/summernote").Include(
+                "~/Content/summernote/summernote.css"
+                ));
         }
     }
 }

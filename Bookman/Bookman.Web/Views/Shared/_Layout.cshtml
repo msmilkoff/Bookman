@@ -6,6 +6,10 @@
     <title>@ViewBag.Title - Bookman</title>
     @Styles.Render("~/Content/bootstrap-paper.css")
     @Styles.Render("~/Content/Site.css")
+    @Styles.Render("~/Content/summernote")
+
+    @RenderSection("head", required: false)
+
     @Scripts.Render("~/bundles/modernizr")
 
 
@@ -23,10 +27,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-
-                    @*
-                        Add links here
-                    *@
+                    <li>@Html.ActionLink("Browse Books", "All", "Books")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -43,7 +44,7 @@
                 <div class="col-sm-3 col-sm-offset-1">
                     <h3>About Bookman</h3>
                     <p>
-                        A web application for reviewing, browsing and buying and learning news about books.
+                        A web application for browsing, buying and learning news about books.
                         We offer good prices and great insights.
                     </p>
                     <p> Dive with us into the endless ocean of knowledge!</p>

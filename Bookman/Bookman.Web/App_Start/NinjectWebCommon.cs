@@ -17,6 +17,7 @@ namespace Bookman.Web.App_Start
     using Bookman.Services.CategoryServices;
     using Bookman.Services.BookServices;
     using Bookman.Services.OrderServices;
+    using Bookman.Services.NewsService;
 
     public static class NinjectWebCommon 
     {
@@ -75,6 +76,7 @@ namespace Bookman.Web.App_Start
             kernel.Bind<ICategoryService>().To<CategoryService>();
             kernel.Bind<IBookService>().To<BookService>();
             kernel.Bind<IOrderService>().To<OrderService>();
+            kernel.Bind<INewsService>().To<NewsService>();
         }        
     }
 }
