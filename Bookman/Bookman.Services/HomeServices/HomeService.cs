@@ -20,7 +20,7 @@
             var latestBooks = this.Data.Books
                 .All()
                 .OrderByDescending(b => b.DateAdded)
-                .Take(3);
+                .Take(4);
 
             var latestBooksViewModel = new List<LatestBookViewModel>();
             foreach (var book in latestBooks)

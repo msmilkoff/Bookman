@@ -7,10 +7,12 @@
     public class HomeController : Controller
     {
         private IHomeService homeService;
+        private INewsService newsService;
 
-        public HomeController(IHomeService homeService)
+        public HomeController(IHomeService homeService, INewsService newsService)
         {
             this.homeService = homeService;
+            this.newsService = newsService;
         }
 
         [HttpGet]

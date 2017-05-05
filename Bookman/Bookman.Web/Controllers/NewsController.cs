@@ -37,10 +37,19 @@
         }
 
         [HttpGet]
-        [Route("News/Details{id}")]
+        [Route("News/Details/{id}")]
         public ActionResult Details(int id)
         {
             var model = this.newsService.GetArticle(id);
+
+            return View(model);
+        }
+
+        [HttpGet]
+        [Route("News/All_Articles")]
+        public ActionResult All()
+        {
+            var model = this.newsService.GetAll();
 
             return View(model);
         }

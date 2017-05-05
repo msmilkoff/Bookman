@@ -299,6 +299,8 @@
     <Content Include="Views\Orders\EditorTemplates\OrderBookViewModel.cshtml" />
     <Content Include="Views\Orders\MyOrders.cshtml" />
     <Content Include="Views\News\WriteArticle.cshtml" />
+    <Content Include="Views\News\Details.cshtml" />
+    <Content Include="Views\News\All.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

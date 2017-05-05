@@ -1,5 +1,6 @@
 ﻿namespace Bookman.Services.NewsService
 {
+    using System.Collections.Generic;
     using System.Linq;
     using Bookman.Data;
     using Bookman.Models;
@@ -24,6 +25,13 @@
         {
             this.Data.NewsArticles.Add(article);
             this.Data.SaveChanges();
+        }
+
+        public IEnumerable<NewsArticle> GetAll()
+        {
+            var model = this.Data.NewsArticles.All().ToList();
+
+            return model;
         }
     }
 }

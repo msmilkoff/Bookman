@@ -1,0 +1,21 @@
+﻿@model  IEnumerable<Bookman.Models.NewsArticle>
+
+@{
+    ViewBag.Title = "AllArticles";
+}
+
+<h2>All Articles</h2>
+
+<div class="row">
+    @foreach (var article in Model)
+    {
+        <div class="col-sm-6">
+            <h3>@article.Title</h3>
+            <p>@article.Content.Substring(0, 100) ...</p>
+            <div class="btn btn-default">
+                @Html.ActionLink("Read More", "Details", "News", new { id = article.Id}, null)
+            </div>
+            <hr />
+        </div>
+    }
+</div>
