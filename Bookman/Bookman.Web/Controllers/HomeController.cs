@@ -18,7 +18,9 @@
         [HttpGet]
         public ActionResult Index()
         {
-            var latestBooks = this.homeService.GetLatestBooks().ToList();
+            var latestBooks = this.homeService
+                .GetLatestBooks()
+                .ToList();
 
             return View(latestBooks);
         }
